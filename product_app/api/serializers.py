@@ -3,6 +3,7 @@ from product_app.models import Product, ProductKeySpecs, ProductDetailSpecs, Pro
 
 
 class ProductDetailSpecsDtlSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = ProductDetailSpecsDtl
         # fields = "__all__"
@@ -35,6 +36,7 @@ class ProductSerializer(serializers.ModelSerializer):
     spechDetails = ProductDetailSpecsSerializer(many=True, read_only=True)
 
     class Meta:
+
         model = Product
         # fields = "__all__"
         exclude = ('status', 'creator', 'createdAt',

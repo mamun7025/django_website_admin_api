@@ -6,7 +6,7 @@ from django.db import models
 class Product(models.Model):
     productCode = models.CharField(max_length=20)
     productName = models.CharField(max_length=50)
-    descrition = models.TextField(blank=True, max_length=250)
+    description = models.TextField(blank=True, max_length=250)
     productLogo = models.CharField(max_length=500, blank=True)
     productLogoAlt = models.CharField(max_length=100, blank=True)
     status = models.BooleanField(default=True)
